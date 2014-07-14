@@ -1,0 +1,8 @@
+              IN      MX    20 mail2.example.com. 
+@             IN      MX    20 mail2.example.com. 
+              IN  MX    50 mail3              
+@             IN  MX    50 mail3              
+example.com.  IN      A     192.0.2.1             
+              IN      AAAA  2001:db8:10::1       
+ns            IN  A     192.0.2.2             
+              IN      AAAA  2001:db8:10::2               IN      MX    20 mail2.example.com. 

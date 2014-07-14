@@ -1,0 +1,21 @@
+from Queue import Queue
+import threading
+import time
+
+t0 = time.time()
+
+n=600851475143
+def primes(n):
+    primfac = []
+    d = 2
+    while d*d <= n:
+        while (n % d) == 0:
+            primfac.append(d)  # supposing you want multiple factors repeated
+            n /= d
+        d += 1
+    if n >= 1:
+       primfac.append(n)
+    return primfac
+print max(primes(n))
+
+
