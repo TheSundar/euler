@@ -1,0 +1,4 @@
+euler
+=====
+
+my euler solutions
