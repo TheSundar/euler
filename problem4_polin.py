@@ -1,5 +1,3 @@
-__author__ = 'Sundar'
-
 import cProfile
 
 def do_cprofile(func):
@@ -15,10 +13,13 @@ def do_cprofile(func):
     return profiled_func
 
 @do_cprofile
-def pol():
+def pol(n):
     highest=0
-    for i in xrange(99999,9999,-1):
-        for j in xrange(i,9999,-1):
+    left=int(str(n)[:-1])
+    for i in xrange(n,left,-1):
+        if i * n < highest:
+            break
+        for j in xrange(i,left,-1):
             poli=str(i*j)
             intpoli=int(poli)
             if poli == poli[::-1] and highest<intpoli :
@@ -27,4 +28,5 @@ def pol():
                 break
 
     return highest
-print pol()
+print pol(99999)
+
