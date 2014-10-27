@@ -1,0 +1,14 @@
+import math
+list=[]
+for a in range(1,1000):
+    for b in range(1,1000):
+        if a<b:
+            x=math.sqrt( a**2 + b**2)
+            if x.is_integer():
+                if a+b+x <= 1000:
+                    list.append(a+b+x)
+                    print a , b , x , a+b+x
+
+import collections
+c= collections.Counter(list)
+print c
